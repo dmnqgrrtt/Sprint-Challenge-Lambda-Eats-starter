@@ -5,7 +5,7 @@ export default function size ({ formState, onChange }) {
         <label htmlFor='size'>
                     <h4>Choose the size</h4>
 
-                    <select id="size" name="size" value={formState.size} onChange={onChange}>
+                    <select id="size" name="size" value={formState.size} onChange={onChange} data-cy="size">
                         <option value="">--Select--</option>
                         <option value="Small">Small (feeds 2)</option>
                         <option value="Medium">Medium (feeds 4)</option>

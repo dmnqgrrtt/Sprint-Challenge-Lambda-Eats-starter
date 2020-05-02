@@ -61,7 +61,7 @@ function OrderPage ({ orders, setOrders }) {
                      setFormState(initialForm);
                     })
             }else {
-                setSubmitError("Please complete all required fields");
+                setSubmitError("Please enter a valid name");
             }
         })
 
@@ -78,7 +78,7 @@ function OrderPage ({ orders, setOrders }) {
             <form onSubmit={submitForm}>
                 <label htmlFor='name'>
                     <h4>Name</h4>
-                    <input type='text' name='name' id='name' placeholder='Enter your name here' value={formState.name} onChange={onChange} />
+                    <input type='text' name='name' id='name' placeholder='Enter your name here' value={formState.name} onChange={onChange} data-cy="name"/>
                 </label>
                 {nameError.name.length > 0 ? <p>{nameError.name}</p> : null}
                 <PizzaSize formState={formState} onChange={onChange} />
